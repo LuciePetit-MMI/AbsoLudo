@@ -1,0 +1,26 @@
+/* ------------------------------------ _Config
+                  1 - Variables
+                  2 - Configuration de base ------------------------------------ */
+
+/* ------------------------------------ 1- Variables ------------------------------------ */
+
+$dominante: #4d0818;
+$tonic: #fc3c2b;
+$dark: #2e2e36;
+$light: #ffffff;
+$semi-bold: 600;
+$poppins: "poppins", sans-serif;
+$akaya: "Akaya Telivigala", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap");
+
+/* ------------------------------------ 2- Configuration de base ------------------------------------ */
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}

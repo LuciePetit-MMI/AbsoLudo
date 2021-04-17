@@ -1,0 +1,180 @@
+.grid {
+  display: grid;
+  grid-template-areas:
+    "ludo ludo"
+    "selec wish"
+    "selec calendar"
+    "topj calendar"
+    "topj map"
+    "forum forum";
+  height: 80vh;
+  margin-top: 70px;
+  grid-gap: 10px;
+
+  &_item {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  & .user {
+    &_library {
+      grid-area: ludo;
+      background: linear-gradient(to left, rgba($tonic, 0.6), rgba($tonic, 0.3)),
+        url(../img/library_bg.JPG);
+      background-position: center;
+      background-size: cover;
+
+      & h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: $poppins;
+        color: $light;
+      }
+    }
+
+    &_selection {
+      grid-area: selec;
+      background: linear-gradient(to left, rgba($dark, 0.6), rgba($dark, 0.3)),
+        url(../img/selection_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_top {
+      grid-area: topj;
+      background: linear-gradient(
+          to left,
+          rgba($dominante, 0.6),
+          rgba($dominante, 0.3)
+        ),
+        url(../img/top_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_wishlist {
+      grid-area: wish;
+      background: linear-gradient(
+          to left,
+          rgba($dominante, 0.6),
+          rgba($dominante, 0.3)
+        ),
+        url(../img/wishlist_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_calendar {
+      grid-area: calendar;
+      background: linear-gradient(
+          to left,
+          rgba($dominante, 0.6),
+          rgba($dominante, 0.3)
+        ),
+        url(../img/calendar_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_map {
+      grid-area: map;
+      background: linear-gradient(to left, rgba($dark, 0.6), rgba($dark, 0.3)),
+        url(../img/map_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_forum {
+      grid-area: forum;
+      background: linear-gradient(to left, rgba($tonic, 0.6), rgba($tonic, 0.3)),
+        url(../img/forum_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-areas:
+    "event event"
+    "topj calendar"
+    "topj calendar"
+    "forum calendar"
+    "forum map"
+    "forum map";
+  height: 80vh;
+  margin-top: 70px;
+  grid-gap: 10px;
+
+  &_item {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  & .pro {
+    &_event {
+      grid-area: event;
+      background: $tonic;
+
+      & h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: $poppins;
+        color: $light;
+      }
+    }
+
+    &_top {
+      grid-area: topj;
+      background: linear-gradient(
+          to left,
+          rgba($dominante, 0.6),
+          rgba($dominante, 0.3)
+        ),
+        url(../img/top_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_calendar {
+      grid-area: calendar;
+      background: linear-gradient(
+          to left,
+          rgba($dominante, 0.6),
+          rgba($dominante, 0.3)
+        ),
+        url(../img/calendar_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_map {
+      grid-area: map;
+      background: linear-gradient(to left, rgba($dark, 0.6), rgba($dark, 0.3)),
+        url(../img/map_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &_forum {
+      grid-area: forum;
+      background: linear-gradient(to left, rgba($tonic, 0.6), rgba($tonic, 0.3)),
+        url(../img/forum_bg.JPG);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

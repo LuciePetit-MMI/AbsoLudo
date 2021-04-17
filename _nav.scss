@@ -1,0 +1,167 @@
+.nav {
+  background: $dominante;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 1000;
+
+  &_logo {
+    height: 40px;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &_profil_change {
+    margin-left: 170px;
+
+    & img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    &_items {
+      display: none;
+      background: $dominante;
+      position: absolute;
+      top: 70px;
+      left: 150px;
+      border-radius: 20px;
+      padding: 5px 10px;
+
+      &.open {
+        display: block;
+      }
+
+      & img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      & p,
+      & a {
+        color: $light;
+        margin: 0;
+      }
+
+      & .triangle {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 0px;
+          height: 0px;
+          border-top: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid $dominante;
+          border-left: 15px solid transparent;
+          top: -34px;
+          right: 55px;
+        }
+      }
+    }
+
+    &_item {
+      display: flex;
+      margin: 5px 0;
+      align-items: center;
+
+      & p {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &_ham {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+
+    &_item {
+      width: 2.5rem;
+      height: 0.3rem;
+      background: $tonic;
+      border-radius: 10px;
+      position: absolute;
+      top: 30px;
+      transform: rotate(0deg);
+      transition: transform 0.1s linear;
+
+      &:before {
+        content: "";
+        width: 2.5rem;
+        height: 0.3rem;
+        background: $tonic;
+        border-radius: 10px;
+        position: absolute;
+        top: -10px;
+      }
+
+      &:after {
+        content: "";
+        width: 1.75rem;
+        height: 0.3rem;
+        background: $tonic;
+        border-radius: 10px;
+        position: absolute;
+        top: 10px;
+      }
+
+      &.open {
+        transform: rotate(130deg);
+        transition: transform 0.1s linear;
+      }
+      &.open:before {
+        transform: rotate(100deg);
+        top: 0;
+        right: 0;
+        transition: transform 0.1s linear;
+      }
+      &.open:after {
+        transform: rotate(100deg);
+        top: 7px;
+        right: 7px;
+        transition: transform 0.1s linear;
+      }
+    }
+  }
+
+  &_menu {
+    height: 100vh;
+    width: 100vw;
+    background: $dominante;
+    position: absolute;
+    top: 60px;
+    margin: 0 0 0 -10px;
+    text-align: center;
+    padding: 90px 0 0 0;
+    justify-content: center;
+    display: none;
+
+    &_link {
+      margin: 15px 0;
+      & a {
+        font-size: 2rem;
+        color: $light;
+
+        &.current {
+          color: $tonic;
+          font-weight: $semi-bold;
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+}

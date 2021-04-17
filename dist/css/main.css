@@ -1,0 +1,389 @@
+/* ------------------------------------ _Config
+                  1 - Variables
+                  2 - Configuration de base ------------------------------------ */
+/* ------------------------------------ 1- Variables ------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap");
+/* ------------------------------------ 2- Configuration de base ------------------------------------ */
+* {
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+.nav {
+  background: #4d0818;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 1000;
+}
+
+.nav_logo {
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav_profil_change {
+  margin-left: 170px;
+}
+
+.nav_profil_change img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav_profil_change_items {
+  display: none;
+  background: #4d0818;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav_profil_change_items.open {
+  display: block;
+}
+
+.nav_profil_change_items img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav_profil_change_items p,
+.nav_profil_change_items a {
+  color: #ffffff;
+  margin: 0;
+}
+
+.nav_profil_change_items .triangle {
+  position: relative;
+}
+
+.nav_profil_change_items .triangle:before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #4d0818;
+  border-left: 15px solid transparent;
+  top: -34px;
+  right: 55px;
+}
+
+.nav_profil_change_item {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+}
+
+.nav_profil_change_item p {
+  padding-left: 10px;
+}
+
+.nav_ham {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+}
+
+.nav_ham_item {
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #fc3c2b;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+  transform: rotate(0deg);
+  transition: transform 0.1s linear;
+}
+
+.nav_ham_item:before {
+  content: "";
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #fc3c2b;
+  border-radius: 10px;
+  position: absolute;
+  top: -10px;
+}
+
+.nav_ham_item:after {
+  content: "";
+  width: 1.75rem;
+  height: 0.3rem;
+  background: #fc3c2b;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.nav_ham_item.open {
+  transform: rotate(130deg);
+  transition: transform 0.1s linear;
+}
+
+.nav_ham_item.open:before {
+  transform: rotate(100deg);
+  top: 0;
+  right: 0;
+  transition: transform 0.1s linear;
+}
+
+.nav_ham_item.open:after {
+  transform: rotate(100deg);
+  top: 7px;
+  right: 7px;
+  transition: transform 0.1s linear;
+}
+
+.nav_menu {
+  height: 100vh;
+  width: 100vw;
+  background: #4d0818;
+  position: absolute;
+  top: 60px;
+  margin: 0 0 0 -10px;
+  text-align: center;
+  padding: 90px 0 0 0;
+  justify-content: center;
+  display: none;
+}
+
+.nav_menu_link {
+  margin: 15px 0;
+}
+
+.nav_menu_link a {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.nav_menu_link a.current {
+  color: #fc3c2b;
+  font-weight: 600;
+}
+
+.nav_menu.open {
+  display: block;
+}
+
+/* ------------------------------------ _Composants
+                  1 - Textes ------------------------------------ */
+/* ------------------------------------ 1 - Textes ------------------------------------ */
+.h1 {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 2.5em;
+  color: #4d0818;
+  padding-top: 130px;
+}
+
+.h1__highlight {
+  color: #fc3c2b;
+}
+
+h2 {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 2em;
+  color: #4d0818;
+}
+
+h3 {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 1.5em;
+  color: #4d0818;
+}
+
+p,
+a,
+li {
+  color: #2e2e36;
+  font-family: "poppins", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "ludo ludo" "selec wish" "selec calendar" "topj calendar" "topj map" "forum forum";
+  height: 90vh;
+  margin: 70px 10px;
+  grid-gap: 10px;
+}
+
+.grid_item {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.grid .user_library {
+  grid-area: ludo;
+  background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/library_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_library h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.grid .user_selection {
+  grid-area: selec;
+  background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/selection_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_top {
+  grid-area: topj;
+  background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/top_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_wishlist {
+  grid-area: wish;
+  background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/wishlist_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_calendar {
+  grid-area: calendar;
+  background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/calendar_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_map {
+  grid-area: map;
+  background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/map_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid .user_forum {
+  grid-area: forum;
+  background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/forum_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-areas: "event event" "topj calendar" "topj calendar" "forum calendar" "forum map" "forum map";
+  height: 90vh;
+  margin: 70px 10px;
+  grid-gap: 10px;
+}
+
+.grid2_item {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.grid2 .pro_event {
+  grid-area: event;
+  background: #fc3c2b;
+}
+
+.grid2 .pro_event h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: "poppins", sans-serif;
+  color: #ffffff;
+}
+
+.grid2 .pro_top {
+  grid-area: topj;
+  background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/top_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid2 .pro_calendar {
+  grid-area: calendar;
+  background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/calendar_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid2 .pro_map {
+  grid-area: map;
+  background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/map_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid2 .pro_forum {
+  grid-area: forum;
+  background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/forum_bg.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer {
+  background: #4d0818;
+  border-top: #fc3c2b solid 10px;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  padding: 5px 10px;
+}
+
+.footer_items {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.footer_items_text p,
+.footer_items_text a {
+  color: #ffffff;
+}
+
+.footer_items_text_project a {
+  color: #fc3c2b;
+}
+
+.footer_items_social {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_items_social i {
+  color: #ffffff;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=main.css.map */

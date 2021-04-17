@@ -1,0 +1,37 @@
+/* ------------------------------------ _Composants
+                  1 - Textes ------------------------------------ */
+
+/* ------------------------------------ 1 - Textes ------------------------------------ */
+
+.h1 {
+  font-family: $akaya;
+  font-size: 2.5em;
+  color: $dominante;
+  padding-top: 130px;
+
+  &__highlight {
+    color: $tonic;
+  }
+}
+
+h2 {
+  font-family: $akaya;
+  font-size: 2em;
+  color: $dominante;
+}
+
+h3 {
+  font-family: $akaya;
+  font-size: 1.5em;
+  color: $dominante;
+}
+
+p,
+a,
+li {
+  color: $dark;
+  font-family: $poppins;
+  font-size: 1.2rem;
+  text-decoration: none;
+  list-style: none;
+}
