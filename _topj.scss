@@ -1,0 +1,34 @@
+#topj {
+  position: relative;
+
+  h1 {
+    font-family: $poppins;
+    display: flex;
+    width: 100vw;
+    margin-left: -20px;
+
+    & .active {
+      color: $light;
+      background: $dominante;
+    }
+
+    & div {
+      width: 50vw;
+      text-align: center;
+      padding: 5px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      font-size: 1.3rem;
+      color: $dark;
+      background: rgba($color: $dark, $alpha: 0.2);
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+}
