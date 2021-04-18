@@ -14,6 +14,11 @@ img {
   width: 100%;
 }
 
+body {
+  width: 90vw;
+  margin: 0 auto;
+}
+
 .nav {
   background: #4d0818;
   position: fixed;
@@ -189,32 +194,35 @@ img {
 /* ------------------------------------ _Composants
                   1 - Textes ------------------------------------ */
 /* ------------------------------------ 1 - Textes ------------------------------------ */
-.h1 {
+h1 {
   font-family: "Akaya Telivigala", cursive;
-  font-size: 2.5em;
-  color: #4d0818;
-  padding-top: 130px;
-}
-
-.h1__highlight {
-  color: #fc3c2b;
+  font-size: 2.5rem;
+  color: #2e2e36;
+  margin-top: 80px;
 }
 
 h2 {
-  font-family: "Akaya Telivigala", cursive;
-  font-size: 2em;
-  color: #4d0818;
+  font-family: "poppins", sans-serif;
+  font-size: 1.8rem;
+  color: #2e2e36;
 }
 
 h3 {
-  font-family: "Akaya Telivigala", cursive;
-  font-size: 1.5em;
+  font-family: "poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #2e2e36;
+}
+
+h4 {
+  font-family: "poppins", sans-serif;
+  font-size: 1.2rem;
   color: #4d0818;
 }
 
 p,
 a,
-li {
+li,
+button {
   color: #2e2e36;
   font-family: "poppins", sans-serif;
   font-size: 1.2rem;
@@ -222,11 +230,54 @@ li {
   list-style: none;
 }
 
+p i,
+a i,
+li i,
+button i {
+  margin-right: 10px;
+}
+
+.primary_btn {
+  background: #fc3c2b;
+  border: none;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary_btn {
+  background: transparent;
+  border: 2px solid #4d0818;
+  color: #4d0818;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-de {
+  background: url(../img/svg/de.svg) no-repeat;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+.icon-de-outline {
+  background: url(../img/svg/de-outline.svg);
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
 .grid {
   display: grid;
   grid-template-areas: "ludo ludo" "selec wish" "selec calendar" "topj calendar" "topj map" "forum forum";
-  height: 90vh;
-  margin: 70px 10px;
+  height: 80vh;
+  margin-top: 70px;
   grid-gap: 10px;
 }
 
@@ -237,6 +288,7 @@ li {
   align-items: center;
   color: #ffffff;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .grid .user_library {
@@ -250,6 +302,8 @@ li {
   margin: 0;
   font-size: 1.5rem;
   font-weight: normal;
+  font-family: "poppins", sans-serif;
+  color: #ffffff;
 }
 
 .grid .user_selection {
@@ -297,8 +351,8 @@ li {
 .grid2 {
   display: grid;
   grid-template-areas: "event event" "topj calendar" "topj calendar" "forum calendar" "forum map" "forum map";
-  height: 90vh;
-  margin: 70px 10px;
+  height: 80vh;
+  margin-top: 70px;
   grid-gap: 10px;
 }
 
@@ -309,6 +363,7 @@ li {
   align-items: center;
   color: #ffffff;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .grid2 .pro_event {
@@ -320,7 +375,6 @@ li {
   margin: 0;
   font-size: 1.5rem;
   font-weight: normal;
-  font-family: "poppins", sans-serif;
   color: #ffffff;
 }
 
@@ -352,13 +406,262 @@ li {
   background-size: cover;
 }
 
+#selection {
+  position: relative;
+}
+
+.game_cross {
+  width: 2rem;
+  height: 0.3rem;
+  background: #2e2e36;
+  transform: rotate(45deg);
+  margin-left: 80vw;
+}
+
+.game_cross:after {
+  content: "";
+  width: 2rem;
+  height: 0.3rem;
+  background: #2e2e36;
+  transform: rotate(90deg);
+  display: block;
+}
+
+.game_elements {
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1px solid #2e2e36;
+  padding: 20px 0 10px 0;
+}
+
+.game_img {
+  width: 125px;
+  height: fit-content;
+}
+
+.game_items_title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.game_items .wrap {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 10px;
+}
+
+.game_items_info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.game_items_info p {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.game_items_info p i {
+  margin-right: 5px;
+  height: 20px;
+  color: #fc3c2b;
+}
+
+.game_items_note_mark {
+  color: #fc3c2b;
+  margin: 0;
+  font-size: 1.7rem;
+  display: flex;
+}
+
+.game_items_note_notice {
+  font-size: 1rem;
+  color: lightgray;
+  font-style: italic;
+  margin: 0;
+}
+
+.game_charac {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: -20px;
+  z-index: 500;
+  background: #ffffff;
+  width: 100vw;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.game_charac.show {
+  display: block;
+}
+
+.game_charac_img {
+  background: linear-gradient(0deg, #2e2e36, transparent), url(../img/profil.jpg) no-repeat;
+  width: 100vw;
+  height: 40vh;
+  background-size: contain;
+  margin-left: -15px;
+  background-position: center;
+}
+
+.game_charac section {
+  margin-bottom: 60px;
+}
+
+.game_charac_items .line {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.game_charac_items .line p {
+  margin: 10px 0 0 0;
+}
+
+.game_charac_items .line p i {
+  margin-right: 10px;
+  color: #4d0818;
+}
+
+.game_charac_items_note {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-left: 150px;
+}
+
+.game_charac_items_note_mark {
+  color: #fc3c2b;
+  margin: 0;
+  font-size: 2.3rem;
+  display: flex;
+}
+
+.game_charac_items_note_mark i {
+  height: 60px;
+  width: 60px;
+}
+
+.game_charac_items_note_notice {
+  font-size: 1rem;
+  color: lightgray;
+  font-style: italic;
+  margin: 0;
+}
+
+.game_interact_ludo {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.game_interact_ludo button {
+  font-size: 1rem;
+}
+
+.game_interact_notice {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.game_interact_notice p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.game_interact_notice p i {
+  margin: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.game_interact_notice button {
+  font-size: 1rem;
+}
+
+.game_affiliation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game_affiliation img {
+  height: 70px;
+  width: auto;
+}
+
+.game_notice_items {
+  display: flex;
+  flex-flow: row;
+  margin: 20px 0;
+  border-bottom: 2px solid #2e2e36;
+  padding-bottom: 10px;
+}
+
+.game_notice_img {
+  width: 60px;
+  height: fit-content;
+}
+
+.game_notice p,
+.game_notice h4 {
+  margin: 0;
+}
+
+.game_notice_badge {
+  color: #fc3c2b;
+}
+
+#topj {
+  position: relative;
+}
+
+#topj h1 {
+  font-family: "poppins", sans-serif;
+  display: flex;
+  width: 100vw;
+  margin-left: -20px;
+}
+
+#topj h1 .active {
+  color: #ffffff;
+  background: #4d0818;
+}
+
+#topj h1 div {
+  width: 50vw;
+  text-align: center;
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 1.3rem;
+  color: #2e2e36;
+  background: rgba(46, 46, 54, 0.2);
+}
+
+#topj .hidden {
+  display: none;
+}
+
+#topj .show {
+  display: block;
+}
+
 .footer {
   background: #4d0818;
   border-top: #fc3c2b solid 10px;
   width: 100vw;
-  position: absolute;
-  left: 0;
   padding: 5px 10px;
+  margin: 70px 0 0 -20px;
 }
 
 .footer_items {
