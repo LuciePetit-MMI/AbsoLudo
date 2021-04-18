@@ -37,6 +37,6 @@
     
     /* Quand on click sur le toggle */
     toggle.addEventListener("click", function() {
-      /*Affiche ou cache le menu*/
+      /*Affiche ou cache les profils*/
       profils.classList.toggle("open");
     });
