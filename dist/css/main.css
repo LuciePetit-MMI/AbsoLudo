@@ -192,7 +192,10 @@ body {
 }
 
 /* ------------------------------------ _Composants
-                  1 - Textes ------------------------------------ */
+                  1 - Textes
+                  2 - Buttons
+                  3 - Custom Icons
+                  4 - Forms ------------------------------------ */
 /* ------------------------------------ 1 - Textes ------------------------------------ */
 h1 {
   font-family: "Akaya Telivigala", cursive;
@@ -222,7 +225,8 @@ h4 {
 p,
 a,
 li,
-button {
+button,
+label {
   color: #2e2e36;
   font-family: "poppins", sans-serif;
   font-size: 1.2rem;
@@ -233,10 +237,12 @@ button {
 p i,
 a i,
 li i,
-button i {
+button i,
+label i {
   margin-right: 10px;
 }
 
+/* ------------------------------------ 2 - Buttons ------------------------------------ */
 .primary_btn {
   background: #fc3c2b;
   border: none;
@@ -259,6 +265,7 @@ button i {
   align-items: center;
 }
 
+/* ------------------------------------ 3 - custom Icons ------------------------------------ */
 .icon-de {
   background: url(../img/svg/de.svg) no-repeat;
   height: 40px;
@@ -271,6 +278,33 @@ button i {
   height: 40px;
   width: 40px;
   display: inline-block;
+}
+
+/* ------------------------------------ 4 - Forms ------------------------------------ */
+form {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+form input[type="text"], form input[type="message"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #2e2e36;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+}
+
+form input[type="message"] {
+  height: 175px;
+  padding: 10px 5px 130px 5px;
+}
+
+form input[type="submit"] {
+  width: fit-content;
+  font-size: 1.2rem;
 }
 
 .grid {
@@ -656,12 +690,96 @@ button i {
   display: block;
 }
 
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#library .titles {
+  font-size: 1.1rem;
+  display: flex;
+  width: 100vw;
+  margin-left: -20px;
+}
+
+#library .titles .active {
+  color: #ffffff;
+  background: #4d0818;
+}
+
+#library .titles h2 {
+  width: 33.33vw;
+  text-align: center;
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #2e2e36;
+  background: rgba(46, 46, 54, 0.2);
+}
+
+#library .ludo_game {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-gap: 10px;
+}
+
+#library .ludo_game_title {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+#library .ludo_game_btns {
+  display: flex;
+  flex-flow: row;
+}
+
+#library .ludo_game_btns button {
+  font-size: 1rem;
+  padding: 5px;
+  margin-right: 12px;
+}
+
+#map form {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+#map form .shop {
+  color: #fc3c2b;
+}
+
+#map form .bar {
+  color: #4d0818;
+}
+
+#map form .association {
+  color: #e1cab4;
+}
+
+#contact h1,
+#nogame h1 {
+  font-family: "poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#contact h1 span,
+#nogame h1 span {
+  font-size: 1.2rem;
+}
+
 .footer {
   background: #4d0818;
   border-top: #fc3c2b solid 10px;
   width: 100vw;
   padding: 5px 10px;
-  margin: 70px 0 0 -20px;
+  margin: 70px 0 0 -19px;
 }
 
 .footer_items {
@@ -688,5 +806,14 @@ button i {
 .footer_items_social i {
   color: #ffffff;
   margin: 10px 0;
+}
+
+#thanks h2 {
+  font-family: "Akaya Telivigala", cursive;
+  color: #4d0818;
+}
+
+#thanks p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
