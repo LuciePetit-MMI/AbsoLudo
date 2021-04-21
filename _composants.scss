@@ -1,5 +1,8 @@
 /* ------------------------------------ _Composants
-                  1 - Textes ------------------------------------ */
+                  1 - Textes
+                  2 - Buttons
+                  3 - Custom Icons
+                  4 - Forms ------------------------------------ */
 
 /* ------------------------------------ 1 - Textes ------------------------------------ */
 
@@ -31,7 +34,8 @@ h4 {
 p,
 a,
 li,
-button {
+button,
+label {
   color: $dark;
   font-family: $poppins;
   font-size: 1.2rem;
@@ -42,6 +46,8 @@ button {
     margin-right: 10px;
   }
 }
+
+/* ------------------------------------ 2 - Buttons ------------------------------------ */
 
 .primary_btn {
   background: $tonic;
@@ -65,6 +71,8 @@ button {
   align-items: center;
 }
 
+/* ------------------------------------ 3 - custom Icons ------------------------------------ */
+
 .icon-de {
   background: url(../img/svg/de.svg) no-repeat;
   height: 40px;
@@ -76,5 +84,47 @@ button {
     height: 40px;
     width: 40px;
     display: inline-block;
+  }
+}
+
+/* ------------------------------------ 4 - Forms ------------------------------------ */
+
+form {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+
+  input {
+    &[type="text"],
+    &[type="message"],
+    &[type="checkbox"] {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $dark;
+      font-family: "Poppins";
+      font-size: 1.2rem;
+      padding: 10px 5px;
+      margin-bottom: 20px;
+    }
+
+    &[type="message"] {
+      height: 175px;
+      padding: 10px 5px 130px 5px;
+    }
+
+    &[type="submit"] {
+      width: fit-content;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    &[type="checkbox"] {
+      display: block;
+      height: 20px;
+
+      &:focus {
+        color: $dark;
+      }
+    }
   }
 }
