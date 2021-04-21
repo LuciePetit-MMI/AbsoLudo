@@ -13,7 +13,6 @@ function clickSurBouton(){
             userTop.classList.remove('hidden');
             absoTop.classList.add('hidden');
             absoTop.classList.remove('show');
-
         }
 
     //ajoute .courant au slide precedent
@@ -24,7 +23,6 @@ function clickSurBouton(){
             absoTop.classList.remove('hidden');
             userTop.classList.add('hidden');
             userTop.classList.remove('show');
-
         }
 }
 
