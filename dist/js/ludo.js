@@ -2,9 +2,7 @@ var btns = document.querySelectorAll('#library h2');
 var sections = document.querySelectorAll('#library section');
 var indicators = document.querySelectorAll('#library button');
 
-
 function clickedOnBtn(){
-
     for(let i=0; i<btns.length; i++){
         btns[i].className= "";
     }
@@ -12,7 +10,7 @@ function clickedOnBtn(){
     var btn = this;
     //show have section
     if (btn===have_title){
-        //change active class
+        //change active class 
         btn.classList.add('active');
         //show game user top
         for(let i=0; i<sections.length; i++){
