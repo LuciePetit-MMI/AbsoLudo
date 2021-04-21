@@ -321,7 +321,7 @@ form input[type="checkbox"]:focus {
   display: grid;
   grid-template-areas: "ludo ludo" "selec wish" "selec calendar" "topj calendar" "topj map" "forum forum";
   height: 80vh;
-  margin-top: 70px;
+  margin-top: 90px;
   grid-gap: 10px;
 }
 
@@ -396,7 +396,7 @@ form input[type="checkbox"]:focus {
   display: grid;
   grid-template-areas: "event event" "topj calendar" "topj calendar" "forum calendar" "forum map" "forum map";
   height: 80vh;
-  margin-top: 70px;
+  margin-top: 90px;
   grid-gap: 10px;
 }
 
@@ -1006,5 +1006,141 @@ form input[type="checkbox"]:focus {
   border-radius: 0;
   margin: 0 auto;
   padding: 5px 15px;
+}
+
+#calendar .event_list_item {
+  border: 3px solid #fc3c2b;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  height: 120px;
+  width: 90%;
+  margin-left: 30px;
+}
+
+#calendar .event_list_date {
+  height: 150px;
+  width: 80px;
+  background: #fc3c2b;
+  color: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar .event_list_infos p {
+  text-indent: 60px;
+  margin: 10px;
+}
+
+#calendar .event_list_details {
+  margin-left: 10px;
+  display: flex;
+  flex-flow: column;
+  opacity: 0;
+}
+
+#calendar .event_list_details span {
+  color: #fc3c2b;
+  font-weight: 600;
+}
+
+#calendar .event_list_details p {
+  margin: 10px 0;
+}
+
+#calendar .event_list_btn {
+  align-self: flex-end;
+  margin: 0 10px 20px 0;
+}
+
+/* The container must be positioned relative: */
+#account #account_choice {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+#account #account_choice img {
+  width: 75px;
+  height: auto;
+  margin: 0 10px 20px 10px;
+  border-radius: 50%;
+}
+
+#account #account_choice img.active {
+  border: 5px solid #fc3c2b;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #ffffff;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  /*border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;*/
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #2e2e36 transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #2e2e36;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(46, 46, 54, 0.5) transparent;
+  cursor: pointer;
+  font-family: "poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 200px;
+  overflow-x: scroll;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=main.css.map */
