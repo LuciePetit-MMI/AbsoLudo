@@ -1,0 +1,56 @@
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#library {
+  .titles {
+    font-size: 1.1rem;
+    display: flex;
+    width: 100vw;
+    margin-left: -20px;
+
+    & .active {
+      color: $light;
+      background: $dominante;
+    }
+
+    & h2 {
+      width: 33.33vw;
+      text-align: center;
+      padding: 5px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: $dark;
+      background: rgba($color: $dark, $alpha: 0.2);
+    }
+  }
+
+  .ludo_game {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-gap: 10px;
+
+    &_title {
+      margin: 0 0 5px 0;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+
+    &_btns {
+      display: flex;
+      flex-flow: row;
+
+      & button {
+        font-size: 1rem;
+        padding: 5px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
