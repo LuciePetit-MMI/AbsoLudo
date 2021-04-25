@@ -1,0 +1,117 @@
+#calendar {
+  h1 {
+    font-family: $poppins;
+    display: flex;
+    width: 100vw;
+    font-size: 1.6rem;
+    margin-left: -20px;
+
+    & .active {
+      color: $light;
+      background: $dominante;
+    }
+
+    & div {
+      width: 50vw;
+      text-align: center;
+      padding: 5px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      font-size: 1.3rem;
+      color: $dark;
+      background: rgba($color: $dark, $alpha: 0.2);
+    }
+  }
+
+  .event_list {
+    &_item {
+      border: 3px solid $tonic;
+      border-radius: 20px;
+      position: relative;
+      height: 120px;
+      width: 90%;
+      margin: 0 0 60px 30px;
+
+      &_open {
+        height: fit-content;
+
+        .event_list_details {
+          opacity: 1;
+        }
+      }
+    }
+
+    &_date {
+      height: 150px;
+      width: 80px;
+      background: $tonic;
+      color: $light;
+      border-radius: 20px;
+      position: absolute;
+      top: -40px;
+      left: -30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_infos {
+      & p {
+        text-indent: 60px;
+        margin: 10px;
+      }
+    }
+
+    &_details {
+      margin-left: 10px;
+      display: flex;
+      flex-flow: column;
+      opacity: 0;
+
+      & span {
+        color: $tonic;
+        font-weight: $semi-bold;
+      }
+
+      & p {
+        margin: 10px 0;
+      }
+    }
+
+    &_btn {
+      align-self: flex-end;
+      margin: 0 10px 20px 0;
+    }
+  }
+
+  .slider {
+    &_btn {
+      position: absolute;
+      top: 155px;
+      background: transparent;
+      border: none;
+
+      &#prev,
+      &#prev_participated {
+        left: 15%;
+      }
+
+      &#next,
+      &#next_participated {
+        right: 15%;
+      }
+    }
+
+    &_month {
+      text-align: center;
+    }
+
+    &_slide {
+      display: none;
+      &.actif,
+      &.actif_participated {
+        display: block;
+      }
+    }
+  }
+}

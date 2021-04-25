@@ -195,7 +195,8 @@ body {
                   1 - Textes
                   2 - Buttons
                   3 - Custom Icons
-                  4 - Forms ------------------------------------ */
+                  4 - Forms
+                  5 - Search Bar ------------------------------------ */
 /* ------------------------------------ 1 - Textes ------------------------------------ */
 h1 {
   font-family: "Akaya Telivigala", cursive;
@@ -317,15 +318,38 @@ form input[type="checkbox"]:focus {
   color: #2e2e36;
 }
 
-.grid {
+/* ------------------------------------ 5 - Search Bar ------------------------------------ */
+.search_form {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+  background: rgba(46, 46, 54, 0.2);
+  margin-bottom: 20px;
+}
+
+.search_bar {
+  background: transparent;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+.search_btn {
+  background-color: transparent;
+  border: none;
+}
+
+#home header {
+  margin-bottom: 70px;
+}
+
+#home .grid {
   display: grid;
   grid-template-areas: "ludo ludo" "selec wish" "selec calendar" "topj calendar" "topj map" "forum forum";
   height: 80vh;
-  margin-top: 90px;
   grid-gap: 10px;
 }
 
-.grid_item {
+#home .grid_item {
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -335,14 +359,14 @@ form input[type="checkbox"]:focus {
   text-align: center;
 }
 
-.grid .user_library {
+#home .grid .user_library {
   grid-area: ludo;
   background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/library_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_library h1 {
+#home .grid .user_library h1 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: normal;
@@ -350,57 +374,56 @@ form input[type="checkbox"]:focus {
   color: #ffffff;
 }
 
-.grid .user_selection {
+#home .grid .user_selection {
   grid-area: selec;
   background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/selection_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_top {
+#home .grid .user_top {
   grid-area: topj;
   background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/top_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_wishlist {
+#home .grid .user_wishlist {
   grid-area: wish;
   background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/wishlist_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_calendar {
+#home .grid .user_calendar {
   grid-area: calendar;
   background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/calendar_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_map {
+#home .grid .user_map {
   grid-area: map;
   background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/map_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid .user_forum {
+#home .grid .user_forum {
   grid-area: forum;
   background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/forum_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid2 {
+#home .grid2 {
   display: grid;
   grid-template-areas: "event event" "topj calendar" "topj calendar" "forum calendar" "forum map" "forum map";
   height: 80vh;
-  margin-top: 90px;
   grid-gap: 10px;
 }
 
-.grid2_item {
+#home .grid2_item {
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -410,40 +433,40 @@ form input[type="checkbox"]:focus {
   text-align: center;
 }
 
-.grid2 .pro_event {
+#home .grid2 .pro_event {
   grid-area: event;
   background: #fc3c2b;
 }
 
-.grid2 .pro_event h2 {
+#home .grid2 .pro_event h2 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: normal;
   color: #ffffff;
 }
 
-.grid2 .pro_top {
+#home .grid2 .pro_top {
   grid-area: topj;
   background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/top_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid2 .pro_calendar {
+#home .grid2 .pro_calendar {
   grid-area: calendar;
   background: linear-gradient(to left, rgba(77, 8, 24, 0.6), rgba(77, 8, 24, 0.3)), url(../img/calendar_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid2 .pro_map {
+#home .grid2 .pro_map {
   grid-area: map;
   background: linear-gradient(to left, rgba(46, 46, 54, 0.6), rgba(46, 46, 54, 0.3)), url(../img/map_bg.JPG);
   background-position: center;
   background-size: cover;
 }
 
-.grid2 .pro_forum {
+#home .grid2 .pro_forum {
   grid-area: forum;
   background: linear-gradient(to left, rgba(252, 60, 43, 0.6), rgba(252, 60, 43, 0.3)), url(../img/forum_bg.JPG);
   background-position: center;
@@ -1008,14 +1031,45 @@ form input[type="checkbox"]:focus {
   padding: 5px 15px;
 }
 
+#calendar h1 {
+  font-family: "poppins", sans-serif;
+  display: flex;
+  width: 100vw;
+  font-size: 1.6rem;
+  margin-left: -20px;
+}
+
+#calendar h1 .active {
+  color: #ffffff;
+  background: #4d0818;
+}
+
+#calendar h1 div {
+  width: 50vw;
+  text-align: center;
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 1.3rem;
+  color: #2e2e36;
+  background: rgba(46, 46, 54, 0.2);
+}
+
 #calendar .event_list_item {
   border: 3px solid #fc3c2b;
   border-radius: 20px;
-  margin-bottom: 30px;
   position: relative;
   height: 120px;
   width: 90%;
-  margin-left: 30px;
+  margin: 0 0 60px 30px;
+}
+
+#calendar .event_list_item_open {
+  height: fit-content;
+}
+
+#calendar .event_list_item_open .event_list_details {
+  opacity: 1;
 }
 
 #calendar .event_list_date {
@@ -1056,6 +1110,33 @@ form input[type="checkbox"]:focus {
 #calendar .event_list_btn {
   align-self: flex-end;
   margin: 0 10px 20px 0;
+}
+
+#calendar .slider_btn {
+  position: absolute;
+  top: 155px;
+  background: transparent;
+  border: none;
+}
+
+#calendar .slider_btn#prev, #calendar .slider_btn#prev_participated {
+  left: 15%;
+}
+
+#calendar .slider_btn#next, #calendar .slider_btn#next_participated {
+  right: 15%;
+}
+
+#calendar .slider_month {
+  text-align: center;
+}
+
+#calendar .slider_slide {
+  display: none;
+}
+
+#calendar .slider_slide.actif, #calendar .slider_slide.actif_participated {
+  display: block;
 }
 
 /* The container must be positioned relative: */
