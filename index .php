@@ -8,6 +8,7 @@
     <header>
         <?php require "./html/nav.html"; ?>
     </header>
+    <?php require "./html/searchBar.html"; ?>
     <div class="grid user">
         <a href="ludotheque.php" class="user_library grid_item"><h1>Ma Ludothèque</h1></a>
         <a href="selection.php" class="user_selection grid_item">Sélection du mois</a>

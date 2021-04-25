@@ -9,6 +9,8 @@
         <?php require "./html/nav.html"; ?>
     </header>
     <h1>Ces jeux pourraient vous plaire</h1>
+    <?php require "./html/searchBar.html"; ?>
+
     <?php require "./html/games.html"?>
 
     <?php require "./html/footer.html"; ?>

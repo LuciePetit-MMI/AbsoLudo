@@ -13,6 +13,8 @@
         <div id="absoludo_title" class="top_btn">Top AbsoLudo</div>
     </h1>
 
+    <?php require "./html/searchBar.html"; ?>
+
     <section id="user_top" class="show">
         <?php require "./html/games.html"?>
     </section>

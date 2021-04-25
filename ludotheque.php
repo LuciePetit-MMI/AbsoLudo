@@ -10,6 +10,8 @@
     <h1>Ma Ludothèque</h1>
     </header>
 
+    <?php require "./html/searchBar.html"; ?>
+
     <div class="titles">
         <h2 id="have_title" class="active">Je l'ai</h2>
         <h2 id="played_title">J'y ai joué</h2>

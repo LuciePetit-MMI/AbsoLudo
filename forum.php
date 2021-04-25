@@ -9,6 +9,7 @@
         <?php require "./html/nav.html"; ?>
         <h1>Forum d'entraide</h1>
     </header>
+    <?php require "./html/searchBar.html"; ?>
     <section class="listTopic">
             <div class="topic">
                 <i class="topic_icon fas fa-scroll fa-2x"></i>
