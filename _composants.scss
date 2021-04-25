@@ -2,7 +2,8 @@
                   1 - Textes
                   2 - Buttons
                   3 - Custom Icons
-                  4 - Forms ------------------------------------ */
+                  4 - Forms
+                  5 - Search Bar ------------------------------------ */
 
 /* ------------------------------------ 1 - Textes ------------------------------------ */
 
@@ -126,5 +127,27 @@ form {
         color: $dark;
       }
     }
+  }
+}
+
+/* ------------------------------------ 5 - Search Bar ------------------------------------ */
+.search {
+  &_form {
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    background: rgba($color: $dark, $alpha: 0.2);
+    margin-bottom: 20px;
+  }
+
+  &_bar {
+    background: transparent;
+    border: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  &_btn {
+    background-color: transparent;
+    border: none;
   }
 }

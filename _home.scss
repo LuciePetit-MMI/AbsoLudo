@@ -1,3 +1,9 @@
+#home {
+  header {
+    margin-bottom: 70px;
+  }
+
+
 .grid {
   display: grid;
   grid-template-areas:
@@ -8,7 +14,6 @@
     "topj map"
     "forum forum";
   height: 80vh;
-  margin-top: 90px;
   grid-gap: 10px;
 
   &_item {
@@ -110,7 +115,6 @@
     "forum map"
     "forum map";
   height: 80vh;
-  margin-top: 90px;
   grid-gap: 10px;
 
   &_item {
@@ -176,4 +180,5 @@
       background-size: cover;
     }
   }
+}
 }
