@@ -1,9 +1,9 @@
 <?php 
-    require_once './php/classe/class.Game.php';
-    require_once './php/classe/class.Commentant.php';
-    require_once './php/classe/class.Interagissant.php';
+    require_once ('../classe/class.Game.php');
+    require_once ('../classe/class.Commentant.php');
+    require_once ('../classe/class.Interagissant.php');
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
 //Ordre SQL
@@ -184,6 +184,8 @@
 
     }
 
+    echo(json_encode($listeJeux));
+    
     //echo '<pre>';
     //print_r($listeJeux);
     //echo '</pre>';

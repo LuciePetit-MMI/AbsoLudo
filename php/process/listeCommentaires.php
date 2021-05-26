@@ -1,7 +1,7 @@
 <?php
-    require_once ('./php/classe/class.Commentant.php')  ;
+    require_once '../classe/class.Commentant.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
     //Ordre SQL
     $sql = "SELECT * FROM commente
@@ -87,6 +87,9 @@
             $i++;
         }
     }
+
+    echo(json_encode($listeCommentaires));
+
 //echo '<pre>';
 //print_r($listeCommentaires);
 //echo '</pre>';

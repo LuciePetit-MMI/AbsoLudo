@@ -1,7 +1,7 @@
 <?php
-    require_once './php/classe/class.Obtenu.php';
+    require_once '../classe/class.Obtenu.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -30,6 +30,8 @@
             $listeBadgesObtenus[] = $badge;
         }
     }
+
+    echo(json_encode($listeBadgesObtenus));
 
     //echo '<pre>';
     //print_r($listeBadgesObtenus);

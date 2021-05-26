@@ -6,12 +6,4 @@
         'root',
         'root'
     );
-
-    $request = $pdo->prepare("select * from compte_utilisateur");
-
-    $request->execute();
-
-    $comptes = $request->fetchAll();
-
-    print_r($comptes);
 ?>

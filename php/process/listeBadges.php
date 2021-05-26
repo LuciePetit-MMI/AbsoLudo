@@ -1,7 +1,7 @@
 <?php
-    require_once './php/classe/class.Badge.php';
+    require_once '../classe/class.Badge.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -27,6 +27,8 @@
             $listeBadges[] = $badge;
         }
     }
+
+    echo(json_encode($listeBadges));
 
     //echo '<pre>';
     //print_r($listeBadges);

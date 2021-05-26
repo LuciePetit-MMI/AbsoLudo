@@ -1,7 +1,7 @@
 <?php
-    require_once('./php/classe/class.Interagissant.php');
+    require_once('../classe/class.Interagissant.php');
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
     //Ordre SQL
     $sql = "SELECT * FROM interagit
@@ -87,6 +87,9 @@
             $i++;
         }
     }
+
+    echo(json_encode($listeInteractions));
+
     //echo '<pre>';
     //print_r($listeInteractions);
     //echo '</pre>';

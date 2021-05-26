@@ -1,7 +1,7 @@
 <?php
-    require_once './php/classe/class.Category.php';
+    require_once '../classe/class.Category.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -46,10 +46,12 @@
 
                 WHILE($donneesTopics = $requeteTopics->fetch()){
                     $topics = new Topic(
-                        $donneesTopics['id_topic_TOPIC'],
-                        $donneesTopics['titre_TOPIC_FORUM'],
-                        $donneesTopics['dateheure_TOPIC_FORUM'],
-                        $donneesTopics['message_TOPIC_FORUM']
+                        $donnees['id_topic_TOPIC'],
+                        $donnees['titre_TOPIC_FORUM'],
+                        $donnees['dateheure_TOPIC_FORUM'],
+                        $donnees['message_TOPIC_FORUM'],
+                        $donnees['id_categorie_CATEGORIE'],
+                        $donnees['id_profil_PROFIL']
                     );
 
                     //liste des topics
@@ -65,3 +67,5 @@
         }
 
     }
+
+    echo(json_encode($listeCatégories));

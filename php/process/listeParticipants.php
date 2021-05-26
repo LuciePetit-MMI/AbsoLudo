@@ -1,8 +1,8 @@
 <?php
-    require_once('./php/classe/class.Participant.php');
-    require_once('./php/classe/class.Event.php');
+    require_once('../classe/class.Participant.php');
+    require_once('../classe/class.Event.php');
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
     //Ordre SQL
     $sql = "SELECT * FROM participe
@@ -83,6 +83,8 @@
             $i++;
         }
     }
+
+    echo(json_encode($listeParticipants));
 
     //echo '<pre>';
     //print_r($listeParticipants);

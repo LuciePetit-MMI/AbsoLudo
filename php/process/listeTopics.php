@@ -1,10 +1,10 @@
 <?php
-    require_once './php/classe/class.Topic.php';
-    require_once './php/classe/class.Category.php';
-    require_once './php/classe/class.Repondant.php';
-    require_once './php/classe/class.Profil.php';
+    require_once '../classe/class.Topic.php';
+    require_once '../classe/class.Category.php';
+    require_once '../classe/class.Repondant.php';
+    require_once '../classe/class.Profil.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -26,6 +26,7 @@
                 $donnees['titre_TOPIC_FORUM'],
                 $donnees['dateheure_TOPIC_FORUM'],
                 $donnees['message_TOPIC_FORUM'],
+                $donnees['id_categorie_CATEGORIE'],
                 $donnees['id_profil_PROFIL']
             );
 
@@ -41,7 +42,7 @@
 
             //ordre liste categorie
             $sqlCategorie = "SELECT * FROM categorie_forum
-                             WHERE id_categorie_CATEGORIE = ".(string)$Topics[$i]->id;
+                             WHERE id_categorie_CATEGORIE = ".(string)$Topics[$i]->idCat;
 
             //prepare la requete
             $requeteCategorie = $pdo->prepare($sqlCategorie);
@@ -66,47 +67,48 @@
             $i++;
         }
 
-//Création de la liste des profils créés
-        $i=0;
-        while($i<count($Topics)){
-            //reinitialisation de la liste
-            $listeProfils = array();
 
-            //ordre liste categorie
-            $sqlProfils = "SELECT * FROM profil
-                           WHERE id_profil_PROFIL = ".(string)$Topics[$i]->idProfil;
+//Création de la liste des profils
+    $i=0;
+    while($i<count($Topics)){
+        //reinitialisation de la liste
+        $listeProfil = array();
 
-            //prepare la requete
-            $requeteProfils = $pdo->prepare($sqlProfils);
+        //ordre liste Profil
+        $sqlProfil = "SELECT * FROM profil
+                      WHERE id_profil_PROFIL = ".(string)$Topics[$i]->idProfil;
 
-            //execute la requete
-            if($requeteProfils->execute()) {
+        //prepare la requete
+        $requeteProfil = $pdo->prepare($sqlProfil);
 
-                WHILE($donneesProfils = $requeteProfils->fetch()){
-                    $profil = new Profil(
-                        $donnees['id_profil_PROFIL'],
-                        $donnees['pseudo_PROFIL'],
-                        $donnees['nom_PROFIL'],
-                        $donnees['prenom_PROFIL'],
-                        $donnees['age_PROFIL'],
-                        $donnees['avatar_PROFIL'],
-                        $donnees['jeu_prefere_PROFIL'],
-                        $donnees['centre_interet_PROFIL'],
-                        $donnees['nom_entreprise_PROFIL'],
-                        $donnees['adresse_PROFIL'],
-                        $donnees['type_PROFIL'],
-                        $donnees['id_utilisateur_COMPTE_UTILISATEUR']
-                    );
+        //execute la requete
+        if($requeteProfil->execute()) {
 
-                    //liste des categorie
-                    $listeProfils[] = $profil;
-                }
+            WHILE($donneesProfil = $requeteProfil->fetch()){
+                $profil = new Profil(
+                    $donneesProfil['id_profil_PROFIL'],
+                    $donneesProfil['pseudo_PROFIL'],
+                    $donneesProfil['nom_PROFIL'],
+                    $donneesProfil['prenom_PROFIL'],
+                    $donneesProfil['age_PROFIL'],
+                    $donneesProfil['avatar_PROFIL'],
+                    $donneesProfil['jeu_prefere_PROFIL'],
+                    $donneesProfil['centre_interet_PROFIL'],
+                    $donneesProfil['nom_entreprise_PROFIL'],
+                    $donneesProfil['adresse_PROFIL'],
+                    $donneesProfil['type_PROFIL'],
+                    $donneesProfil['id_utilisateur_COMPTE_UTILISATEUR']
+                );
+
+                //liste des categorie
+                $listeProfil[] = $profil;
             }
-
-            //ajout des categorie au topic
-            $Topics[$i]->setLeProfilCree($listeProfils);
-            $i++;
         }
+
+        //ajout des Profil au topic
+        $Topics[$i]->setLeProfilCree($listeProfil);
+        $i++;
+    }
 
 //Création de la liste des repondants
         $i=0;
@@ -159,6 +161,8 @@
         }
     }
 
-    echo '<pre>';
-    print_r($listeTopics);
-    echo '</pre>';
+    echo(json_encode($listeTopics));
+
+    //echo '<pre>';
+    //print_r($listeTopics);
+    //echo '</pre>';

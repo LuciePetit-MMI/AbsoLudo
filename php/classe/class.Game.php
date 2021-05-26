@@ -59,7 +59,7 @@ class Game implements JsonSerializable{
     public function getLesInteractions(){       return $this->lesInteractions;}
     public function getLesProfils(){            return $this->lesProfils;}
 
-//Getters
+//Setters
     public function setId($id){                                 $this->id = $id;}
     public function setName($name){                             $this->name = $name;}
     public function setImage($image){                           $this->image = $image;}

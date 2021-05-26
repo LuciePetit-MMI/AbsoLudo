@@ -1,5 +1,5 @@
 <?php
-require_once ('./php/classe/class.Profil.php');
+require_once ('../classe/class.Profil.php');
 
 class Interagissant extends Profil implements JsonSerializable{
 

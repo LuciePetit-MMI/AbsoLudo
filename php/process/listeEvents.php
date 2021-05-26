@@ -1,8 +1,8 @@
 <?php
-    require_once './php/classe/class.Event.php';
-    require_once './php/classe/class.Participant.php';
+    require_once '../classe/class.Event.php';
+    require_once '../classe/class.Participant.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -126,6 +126,8 @@
             $i++;
         }
 }
+
+    echo(json_encode($listeEvents));
 
     //echo '<pre>';
     //print_r($listeEvents);

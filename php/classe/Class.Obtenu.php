@@ -1,5 +1,5 @@
 <?php
-require_once('./php/classe/class.Badge.php');
+require_once('../classe/class.Badge.php');
 
 class Obtenu extends Badge implements JsonSerializable{
 

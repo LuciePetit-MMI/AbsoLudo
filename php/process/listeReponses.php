@@ -1,8 +1,8 @@
 <?php
-    require_once('./php/classe/class.Repondant.php');
-    require_once('./php/classe/class.Topic.php');
+    require_once('../classe/class.Repondant.php');
+    require_once('../classe/class.Topic.php');
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
     //Ordre SQL
     $sql = "SELECT * FROM repond
@@ -27,15 +27,14 @@
                 $donnees['age_PROFIL'],
                 $donnees['avatar_PROFIL'],
                 $donnees['jeu_prefere_PROFIL'],
-                $donnees['centre_interet_PROFIL'],
                 $donnees['nom_entreprise_PROFIL'],
+                $donnees['centre_interet_PROFIL'],
                 $donnees['adresse_PROFIL'],
                 $donnees['type_PROFIL'],
                 $donnees['id_utilisateur_COMPTE_UTILISATEUR'],
                 $donnees['id_topic_TOPIC'],
                 $donnees['commentaire_REPOND'],
-                $donnees['date_REPOND'],
-                $donnees['id_topic_TOPIC']
+                $donnees['date_REPOND']
             );
 
             //Ajouter reponse à listeReponse
@@ -60,10 +59,12 @@
 
                 WHILE($donneesTopics = $requeteTopics->fetch()){
                     $topic = new Topic(
-                        $donneesTopics['id_topic_TOPIC'],
-                        $donneesTopics['titre_TOPIC_FORUM'],
-                        $donneesTopics['dateheure_TOPIC_FORUM'],
-                        $donneesTopics['message_TOPIC_FORUM']
+                        $donnees['id_topic_TOPIC'],
+                        $donnees['titre_TOPIC_FORUM'],
+                        $donnees['dateheure_TOPIC_FORUM'],
+                        $donnees['message_TOPIC_FORUM'],
+                        $donnees['id_categorie_CATEGORIE'],
+                        $donnees['id_profil_PROFIL']
                     );
 
                     //liste des jeux créés
@@ -80,6 +81,8 @@
 
     }
 
-    echo '<pre>';
-    print_r($listeReponses);
-    echo '</pre>';
+    echo(json_encode($listeReponses));
+
+    //echo '<pre>';
+    //print_r($listeReponses);
+    //echo '</pre>';

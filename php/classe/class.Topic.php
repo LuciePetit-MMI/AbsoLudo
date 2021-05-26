@@ -8,19 +8,21 @@ class Topic implements JsonSerializable{
     public $title = null;
     public $datetime = null;
     public $message = null;
+    public $idCat = 0;
     public $idProfil = 0;
 
     public $laCategorie = null;
-    public $leProfilCree = null;
+    public $leProfilCree = array();
     public $lesProfilsRepondent = array();
 
 //Constructor
-    public function __construct($id, $title, $datetime, $message, $idProfil)
+    public function __construct($id, $title, $datetime, $message, $idCat, $idProfil)
     {
         $this->id = $id;
         $this->title = $title;
         $this->datetime = $datetime;
         $this->message = $message;
+        $this->idCat = $idCat;
         $this->idProfil = $idProfil;
     }
 
@@ -29,7 +31,8 @@ class Topic implements JsonSerializable{
     public function getTitle(){                     return $this->title;}
     public function getDatetime(){                  return $this->datetime;}
     public function getMessage(){                   return $this->message;}
-    public function getIdProfil(){                   return $this->idProfil;}
+    public function getIdCat(){                     return $this->idCate;}
+    public function getIdProfil(){                  return $this->idProfil;}
 
     public function getLaCategorie(){               return $this->laCategorie;}
     public function getLeProfilCree(){              return $this->leProfilCree;}
@@ -40,7 +43,8 @@ class Topic implements JsonSerializable{
     public function setTitle($title){                               $this->title = $title;}
     public function setDatetime($datetime){                         $this->datetime = $datetime;}
     public function setMessage($message){                           $this->message = $message;}
-    public function setIdProfil($IdProfil){                           $this->idProfil = $idProfil;}
+    public function setIdCat($IdCat){                               $this->idCat = $idCat;}
+    public function setIdProfil($IdProfil){                         $this->idProfil = $idProfil;}
 
     public function setLaCategorie($laCategorie){                   $this->laCategorie = $laCategorie;}
     public function setLeProfilCree($leProfilCree){                 $this->leProfilCree = $leProfilCree;}

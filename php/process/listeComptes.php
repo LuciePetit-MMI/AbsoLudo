@@ -1,7 +1,8 @@
 <?php
-    require_once './php/classe/class.Compte.php';
+    require_once '../classe/class.Compte.php';
+    require_once '../classe/class.Profil.php';
     // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 
     //Ordre SQL
@@ -76,3 +77,8 @@
             $i++;
         }
     }
+
+    echo(json_encode($listeComptes));
+    //echo '<pre>';    
+    //print_r($listeComptes);
+    //echo '<pre>';

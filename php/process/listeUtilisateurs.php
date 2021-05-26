@@ -1,13 +1,13 @@
 <?php
-    require_once './php/classe/class.Profil.php';
-    require_once './php/classe/class.Compte.php';
-    require_once './php/classe/class.Obtenu.php';
-    require_once './php/classe/class.Event.php';
-    require_once './php/classe/class.Topic.php';
-    require_once './php/classe/class.Game.php';
+    require_once '../classe/class.Profil.php';
+    require_once '../classe/class.Compte.php';
+    require_once '../classe/class.Obtenu.php';
+    require_once '../classe/class.Event.php';
+    require_once '../classe/class.Topic.php';
+    require_once '../classe/class.Game.php';
 
 // Création objet PDO
-    include('./php/pdo.php');
+    include('../pdo.php');
 
 //Création du profil
     //Ordre SQL
@@ -172,11 +172,12 @@
 
                 WHILE($donneesTopics = $requeteTopics->fetch()){
                     $topic = new Topic(
-                        $donneesTopics['id_topic_TOPIC'],
-                        $donneesTopics['titre_TOPIC_FORUM'],
-                        $donneesTopics['dateheure_TOPIC_FORUM'],
-                        $donneesTopics['message_TOPIC_FORUM'],
-                        $donneesTopics['id_profil_PROFIL']
+                        $donnees['id_topic_TOPIC'],
+                        $donnees['titre_TOPIC_FORUM'],
+                        $donnees['dateheure_TOPIC_FORUM'],
+                        $donnees['message_TOPIC_FORUM'],
+                        $donnees['id_categorie_CATEGORIE'],
+                        $donnees['id_profil_PROFIL']
                     );
 
                     //liste des topics créés
@@ -234,6 +235,8 @@
             $i++;
         }
     }
+
+    echo(json_encode($listeProfils));
 
     //echo '<pre>';
     //print_r($listeProfils);
