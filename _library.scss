@@ -7,18 +7,21 @@
 }
 
 #library {
+  margin-top: 70px;
+  
   .titles {
     font-size: 1.1rem;
     display: flex;
     width: 100vw;
     margin-left: -20px;
 
-    & .active {
+    & .active{
       color: $light;
       background: $dominante;
     }
 
-    & h2 {
+    & a{
+      display: block;
       width: 33.33vw;
       text-align: center;
       padding: 5px;

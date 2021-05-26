@@ -166,7 +166,8 @@ body {
   background: #4d0818;
   position: absolute;
   top: 60px;
-  margin: 0 0 0 -10px;
+  left: 0;
+  margin: 0;
   text-align: center;
   padding: 90px 0 0 0;
   justify-content: center;
@@ -338,6 +339,10 @@ form input[type="checkbox"]:focus {
   border: none;
 }
 
+#home {
+  margin-top: 90px;
+}
+
 #home header {
   margin-bottom: 70px;
 }
@@ -482,7 +487,7 @@ form input[type="checkbox"]:focus {
   height: 0.3rem;
   background: #2e2e36;
   transform: rotate(45deg);
-  margin-left: 80vw;
+  margin: 3vh 0 0 80vw;
 }
 
 .game_cross:after {
@@ -731,6 +736,10 @@ form input[type="checkbox"]:focus {
   display: none;
 }
 
+#library {
+  margin-top: 70px;
+}
+
 #library .titles {
   font-size: 1.1rem;
   display: flex;
@@ -743,7 +752,8 @@ form input[type="checkbox"]:focus {
   background: #4d0818;
 }
 
-#library .titles h2 {
+#library .titles a {
+  display: block;
   width: 33.33vw;
   text-align: center;
   padding: 5px;
@@ -1079,11 +1089,16 @@ form input[type="checkbox"]:focus {
   color: #ffffff;
   border-radius: 20px;
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+#calendar .event_list_date p {
+  color: #ffffff;
 }
 
 #calendar .event_list_infos p {
