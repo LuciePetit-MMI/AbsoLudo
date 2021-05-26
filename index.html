@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbsoLudo</title>
+
+    <!--<link rel="icon" href="favicon.ico"/> -->
+
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/7909d40077.js" crossorigin="anonymous"></script>
+
+    <!-- Styles css -->
+    <link rel="stylesheet" href="./dist/css/main.css">
+
+    <!-- VueJS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<!--Dev mode --> <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Vue-router pour injection des composants => routage & navigation -->
+    <script src="https://unpkg.com/vue-router"></script>
+
+    <!-- Lib Axios pour Ajax -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Librairie momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+<!----- Navigation -->
+        <nav class="nav">
+
+<!--------- Logo --> 
+            <div class="navbar-brand">
+                <router-link class="nav-link" :to="{name:'Accueil'}">
+                    <img src="./dist/img/svg/logo_absoludo.svg" alt="Logo Absoludo" class="nav_logo">
+                </router-link>
+            </div>
+
+<!--------- Changement profil --> 
+            <div class="nav_profil_change">
+                <img src="./dist/img/profil.jpg" alt="Photo" class="nav_profil_change_show">
+            </div>
+            <div class="nav_profil_change_items">
+                <p class="triangle">Changer de profil ? </p>
+                <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 1" class="nav_profil_change_item"><p>Nom Prénom 1</p></div>
+                <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 2" class="nav_profil_change_item"><p>Nom Prénom 2</p></div>
+                <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 3" class="nav_profil_change_item"><p>Nom Prénom 3</p></div>
+                <router-link :to="{name: 'Logs'}">Déconnexion</router-link>
+            </div>
+
+<!--------- Menu hamburger --> 
+            <div class="nav_ham"
+                    type="button" data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="nav_ham_item"></span>
+            </div>
+
+<!---------- Menu --> 
+            <div class="collapse" id="navbarNav">
+
+                <ul class="nav_menu user_menu">
+                    <li class="nav_menu_link home">
+                        <router-link class="link" :to="{name:'Accueil'}">Accueil</router-link>
+                    </li>
+                    <li class="nav_menu_link library">
+                        <router-link class="link" :to="{name:'Ludotheque'}">Ma Ludothèque</router-link>
+                    </li>
+                    <li class="nav_menu_link selection">
+                        <router-link class="link" :to="{name:'Selection'}">Séléction du mois</router-link>
+                    </li>
+                    <li class="nav_menu_link topj">
+                        <router-link class="link" :to="{name:'Top'}">Tops Jeux</router-link>
+                    </li>
+                    <li class="nav_menu_link wishlist">
+                        <router-link class="link" :to="{name:'Wishlist'}">Wishlist</router-link>
+                    </li>
+                    <li class="nav_menu_link calendar">
+                        <router-link class="link" :to="{name:'Evenement'}">Événements</router-link>
+                    </li>
+                    <li class="nav_menu_link map">
+                        <router-link class="link" :to="{name:'Carte'}">Carte</router-link>
+                    </li>
+                    <li class="nav_menu_link forum">
+                        <router-link class="link" :to="{name:'Forum'}">Forum</router-link>
+                    </li>
+                    <li class="nav_menu_link account">
+                        <router-link class="link" :to="{name:'Compte'}">Mon Compte</router-link>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+<!-- point insertion des composants-->
+    <router-view></router-view>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer_items">
+            <div class="footer_items_text">
+                <p class="footer_items_text_project">Projet réalisé dans le cadre du <a href="http://mmimontbeliard.com">DUT MMI Montbéliard</a></p>
+                <p class="footer_items_text_notice"><router-link :to="{name: 'Legal_notice'}">Mentions Légales</router-link></p>
+                <p class="footer_items_text_contact"><router-link :to="{name: 'Contact'}">Contactez-nous</router-link></p>
+                <p class="footer_items_text_thanks"><router-link :to="{name: 'Thanks'}">Merci aux financeurs</router-link></p>    
+            </div>
+            <div class="footer_items_social">
+                <a href=""><i class="fab fa-instagram fa-2x social"></i></a>
+                <a href=""><i class="fab fa-twitter-square fa-2x social"></i></a>
+                <a href=""><i class="fab fa-facebook-square fa-2x social"></i></a>
+            </div>    
+        </div>
+    </footer>
+</div>    
+
+<!-- les composants utilisés -->
+<script src="pages/accueil.vue.js"></script>
+<script src="pages/ludotheque.vue.js"></script>
+<script src="pages/ludotheque_connait.vue.js"></script>
+<script src="pages/selection.vue.js"></script>
+<script src="pages/top.vue.js"></script>
+<script src="pages/wishlist.vue.js"></script>
+<script src="pages/evenement.vue.js"></script>
+<script src="pages/carte.vue.js"></script>
+<script src="pages/forum.vue.js"></script>
+<script src="pages/topic.vue.js"></script>
+<script src="pages/compte.vue.js"></script>
+<script src="pages/legal_notice.vue.js"></script>
+<script src="pages/contact.vue.js"></script>
+<script src="pages/thanks.vue.js"></script>
+<script src="pages/logs.vue.js"></script>
+
+<script>
+    // Les routages / navigation de l'application
+    var routes = [
+        {path: '/',	                    name:"Logs",	            component:Logs},    
+        {path: '/acceuil',		        name:"Accueil",		        component:Accueil},
+        {path: '/ludotheque',	        name:"Ludotheque",	        component:Ludotheque},
+        {path: '/ludotheque_connait',	name:"Ludotheque_connait",	component:Ludotheque_connait},
+        {path: '/selection',	        name:"Selection",	        component:Selection},
+        {path: '/top',	                name:"Top",	                component:Top},
+        {path: '/wishlist',	            name:"Wishlist",	        component:Wishlist},
+        {path: '/evenement',	        name:"Evenement",	        component:Evenement},
+        {path: '/carte',	            name:"Carte",	            component:Carte},
+        {path: '/forum',	            name:"Forum",	            component:Forum},
+        {path: '/topic',	            name:"Topic",	            component:Topic},
+        {path: '/compte',	            name:"Compte",	            component:Compte},
+        {path: '/legale_notice',	    name:"Legal_notice",	    component:Legal_notice},
+        {path: '/contact',	            name:"Contact",	            component:Contact},
+        {path: '/thanks',	            name:"Thanks",	            component:Thanks},
+    ]
+
+    // Initialisation du router
+    var router = new VueRouter(
+        {routes: routes}
+    )
+    // La vue de l'application (id="app")
+    var app = new Vue({
+        el:"#app",
+        router:router
+    })
+</script>
+
+<!-- Nos scripts -->
+<script src="./dist/js/nav.js"></script>
+<script src="./dist/js/game.js"></script>
+<script src="./dist/js/topj.js"></script>
+<script src="./dist/js/logs.js"></script>
+<script src="./dist/js/event.js"></script>
+<script src="./dist/js/account.js"></script>
+<!-- JS MAP
+<script src="./dist/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>-->
+
+</body>
+</html>
