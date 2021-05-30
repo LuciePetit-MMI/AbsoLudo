@@ -17,8 +17,7 @@ var Ludotheque_connait = Vue.component('Ludotheque_connait',{
                             <div class="ludo_game_text">
                                 <h3 class="ludo_game_title" v-if="jeu.name">{{jeu.name}}</h3>
                                 <div class="ludo_game_btns">
-                                    <button class="ludo_game_have secondary_btn have_section hidden"><i class="fas fa-chess-king"></i> Je l'ai</button>
-                                    <button class="ludo_game_played secondary_btn played_section"><i class="fas fa-check"></i> J'y ai joué</button>
+                                    <button class="ludo_game_have secondary_btn have_section"><i class="fas fa-chess-king"></i> Je l'ai</button>
                                     <button class="ludo_game_want secondary_btn want_section"><i class="far fa-heart"></i> Je le veux</button>
                                 </div>
                             </div>

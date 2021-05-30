@@ -12,7 +12,7 @@
       background: $dominante;
     }
 
-    & div {
+    & a {
       width: 50vw;
       text-align: center;
       padding: 5px;
@@ -22,13 +22,5 @@
       color: $dark;
       background: rgba($color: $dark, $alpha: 0.2);
     }
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .show {
-    display: block;
   }
 }
