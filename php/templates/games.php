@@ -1,13 +1,15 @@
+<?php include("./php/process/listeJeux.php");?>
+
 <div class="game">
     <section class="game_elements">
         <img src="./dist/img/profil.jpg" alt="" class="game_img">
         <div class="game_items">
-            <h2 class="game_items_title">Blanc Manger Coco</h2>
+            <h2 class="game_items_title"><?= $jeu->name;?></h2>
             <div class="wrap">  
                 <div class="game_items_info">
-                    <p class="game_items_info_players"><i class="fas fa-users"></i>3-12</p>
-                    <p class="game_items_info_age"><i class="fas fa-birthday-cake"></i>18+</p>
-                    <p class="game_items_info_time"><i class="fas fa-hourglass-half"></i>30 min</p>
+                    <p class="game_items_info_players"><i class="fas fa-users"></i><?= $jeu->player;?></p>
+                    <p class="game_items_info_age"><i class="fas fa-birthday-cake"></i><?= $jeu->age;?></p>
+                    <p class="game_items_info_time"><i class="fas fa-hourglass-half"></i><?= $jeu->playTime;?></p>
                 </div>
                 <div class="game_items_note">
                     <p class="game_items_note_mark">4,8<i class="icon-de"></i></p>
@@ -20,13 +22,13 @@
         <div class="game_cross"></div>
         <div class="game_charac_img"></div>
         <div class="game_charac_items">
-            <h2 class="game_items_title">Blanc Manger Coco</h2>
+            <h2 class="game_items_title"><?= $jeu->name;?></h2>
             <div class="line">
-                <p class="game_charac_items_players"><i class="fas fa-users"></i>3-12</p>
-                <p class="game_charac_items_age"><i class="fas fa-birthday-cake"></i>18+</p>
-                <p class="game_charac_items_time"><i class="fas fa-hourglass-half"></i>30 min</p>
+                <p class="game_charac_items_players"><i class="fas fa-users"></i><?= $jeu->player;?></p>
+                <p class="game_charac_items_age"><i class="fas fa-birthday-cake"></i><?= $jeu->age;?></p>
+                <p class="game_charac_items_time"><i class="fas fa-hourglass-half"></i><?= $jeu->playTime;?></p>
             </div>
-            <p class="game_charac_items_category">Catégorie : Ambiance, Adulte</p>
+            <p class="game_charac_items_category"><?= $jeu->category;?></p>
         </div>
         <div class="game_charac_items_note">
             <p class="game_charac_items_note_mark">4,8<i class="icon-de"></i></p>
@@ -46,8 +48,8 @@
         </section>
         <h2 class="game_affiliation_title">Achetez-le chez eux !</h2>
         <section class="game_affiliation">
-            <a href="" class="game_affiliation_fnac"><img src="./dist/img/fnac.png" alt=""></a>
-            <a href="" class="game_affiliation_cultura"><img src="./dist/img/cultura.png" alt=""></a>
+            <a href="<?= $jeu->fnac;?>" class="game_affiliation_fnac"><img src="./dist/img/fnac.png" alt=""></a>
+            <a href="<?= $jeu->cultura;?>" class="game_affiliation_cultura"><img src="./dist/img/cultura.png" alt=""></a>
         </section>
         <h3 class="game_notice_title">Les avis des joueurs</h3>
         <section class="game_notice">

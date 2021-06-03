@@ -70,6 +70,11 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &.active{
+    background: $dominante;
+    color: $light;
+  }
 }
 
 /* ------------------------------------ 3 - custom Icons ------------------------------------ */

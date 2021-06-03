@@ -17,8 +17,8 @@ var Wishlist = Vue.component('Wishlist',{
                             <div class="ludo_game_text">
                                 <h3 class="ludo_game_title" v-if="jeu.name">{{jeu.name}}</h3>
                                 <div class="ludo_game_btns">
-                                    <button class="ludo_game_have secondary_btn have_section"><i class="fas fa-chess-king"></i> Je l'ai</button>
-                                    <button class="ludo_game_played secondary_btn played_section"><i class="fas fa-check"></i> J'y ai joué</button>
+                                    <button class="ludo_game_have secondary_btn have_section" :class="{active:isActiveHave}" @click="isActiveHave = !isActiveHave"><i class="fas fa-chess-king"></i> Je l'ai</button>
+                                    <button class="ludo_game_played secondary_btn played_section" :class="{active:isActivePlay}" @click="isActivePlay = !isActivePlay"><i class="fas fa-check"></i> J'y ai joué</button>
                                 </div>
                             </div>
                         </div>
@@ -31,12 +31,23 @@ var Wishlist = Vue.component('Wishlist',{
     data(){
         return{
             listeJeux:[],
+            isActiveHave: false,
+            isActivePlay: false,
         }
     },
     mounted(){
-        axios.get('http://localhost/AbsoLudo/php/process/listeJeux.php')
+        axios.get(backEnd.jeux)
         .then(response => {
             this.listeJeux = response.data;
+           //console.log(this.listeJeux);
+            return;
+        })
+        .catch(error => {
+            console.log(error);
+        });
+        axios.get(backEnd.interactions)
+        .then(response => {
+            this.isActive = response.data;
            //console.log(this.listeJeux);
             return;
         })

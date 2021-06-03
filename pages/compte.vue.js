@@ -1,7 +1,7 @@
 var Compte = Vue.component('Compte',{
     template:`
         <div id="account">
-            <h1>Paramètre du compte</h1>
+            <h1>Paramètres du compte</h1>
             <section id="particular">
                 <div id="account_choice">
                         <img src="./dist/img/profil.jpg" id="account_link" class="active"/>
@@ -65,7 +65,7 @@ var Compte = Vue.component('Compte',{
         }
     },
     mounted(){
-        axios.get('http://localhost/AbsoLudo/php/process/listeComptes.php')
+        axios.get(backEnd.comptesUtilisateurs)
             .then(response => {
                 this.listeComptes = response.data;
                 console.log(this.listeComptes);

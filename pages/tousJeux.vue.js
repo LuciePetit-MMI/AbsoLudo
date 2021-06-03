@@ -7,7 +7,6 @@ var TousJeux = Vue.component('TousJeux',{
         </h1>
 
         <section class="searchBar">
-            
             <input v-model="searchKey" type="search" id="search" placeholder="Rechercher un jeu..." autocomplete="off">
         </section>
 
@@ -121,7 +120,7 @@ var TousJeux = Vue.component('TousJeux',{
     },
     mounted(){
     //requete Jeux
-        axios.get('http://localhost/AbsoLudo/php/process/listeJeux.php')
+        axios.get(backEnd.jeux)
         .then(response => {
             this.listeJeux = response.data;
             return;
@@ -130,7 +129,7 @@ var TousJeux = Vue.component('TousJeux',{
             console.log(error);
         });
     //requete Commentaires
-        axios.get('http://localhost/AbsoLudo/php/process/listeCommentaires.php')
+        axios.get(backEnd.commentaires)
         .then(response => {
             this.listeCommentaires = response.data;
             return;

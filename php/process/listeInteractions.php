@@ -1,18 +1,18 @@
 <?php
     require_once('../classe/class.Interagissant.php');
+    require_once('../classe/class.Game.php');
     // Création objet PDO
     include('../pdo.php');
 
     //Ordre SQL
-    $sql = "SELECT * FROM interagit
-            LEFT JOIN profil
-            ON interagit.id_profil_PROFIL = profil.id_profil_PROFIL";
+    $sql = "SELECT * FROM interagit, jeu_de_societe, profil
+            WHERE jeu_de_societe.id_jeu_JEU_DE_SOCIETE = interagit.id_jeu_JEU_DE_SOCIETE
+            AND interagit.id_profil_PROFIL = profil.id_profil_PROFIL";
 
     //Preparation de la requete
     $requete = $pdo->prepare($sql);
 
     //Tableau des interactions
-    $Interactions = array();
     $listeInteractions = array();
 
     //Execution requete
@@ -38,58 +38,34 @@
                 $donnees['id_jeu_JEU_DE_SOCIETE']
             );
 
-            //Ajouter intergit à listeIntreractions
-            $Interactions[] = $interagit;
-        }
-
-//Création de la liste des jeux intégargit
-        $i=0;
-        while($i<count($Interactions)){
-            //reinitialisation de la liste
-            $listeJeux = array();
-
-            //ordre liste jeux créés
-            $sqlJeux = "SELECT * FROM jeu_de_societe
-                        WHERE id_jeu_JEU_DE_SOCIETE = ".(string)$Interactions[$i]->idJeux;
-
-            //prepare la requete
-            $requeteJeux = $pdo->prepare($sqlJeux);
-
-            //execute la requete
-            if($requeteJeux->execute()) {
-
-                WHILE($donneesJeux = $requeteJeux->fetch()){
-                    $jeu = new Game(
-                        $donneesJeux['id_jeu_JEU_DE_SOCIETE'],
-                        $donneesJeux['nom_JEU_DE_SOCIETE'],
-                        $donneesJeux['photo_JEU_DE_SOCIETE'],
-                        $donneesJeux['age_joueur_JEU_DE_SOCIETE'],
-                        $donneesJeux['temps_jeu_JEU_DE_SOCIETE'],
-                        $donneesJeux['categorie_JEU_DE_SOCIETE'],
-                        $donneesJeux['theme_JEU_DE_SOCIETE'],
-                        $donneesJeux['nombre_joueur_JEU_DE_SOCIETE'],
-                        $donneesJeux['type_JEU_DE_SOCIETE'],
-                        $donneesJeux['editeur_JEU_DE_SOCIETE'],
-                        $donneesJeux['lien_fnac_JEU_DE_SOCIETE'],
-                        $donneesJeux['lien_cultura_JEU_DE_SOCIETE'],
-                        $donneesJeux['id_profil_PROFIL']
-                    );
-
-                    //liste des jeux créés
-                    $listeJeux[] = $jeu;
-                }
-            }
+            $jeu = new Game(
+                $donnees['id_jeu_JEU_DE_SOCIETE'],
+                $donnees['nom_JEU_DE_SOCIETE'],
+                $donnees['photo_JEU_DE_SOCIETE'],
+                $donnees['age_joueur_JEU_DE_SOCIETE'],
+                $donnees['temps_jeu_JEU_DE_SOCIETE'],
+                $donnees['categorie_JEU_DE_SOCIETE'],
+                $donnees['theme_JEU_DE_SOCIETE'],
+                $donnees['nombre_joueur_JEU_DE_SOCIETE'],
+                $donnees['type_JEU_DE_SOCIETE'],
+                $donnees['editeur_JEU_DE_SOCIETE'],
+                $donnees['lien_fnac_JEU_DE_SOCIETE'],
+                $donnees['lien_cultura_JEU_DE_SOCIETE'],
+                $donnees['id_profil_PROFIL']
+            );
 
             //ajout des jeux au profil
-            $Interactions[$i]->setSesJeux($listeJeux);
-            //mise à jour de la liste des commentaire
-            $listeInteractions[] = $Interactions;
-            $i++;
+            $interagit->setSesJeux($jeu);
+
+
+            //Ajouter intergit à listeIntreractions
+            $listeInteractions[] = $interagit;
         }
+
     }
 
     echo(json_encode($listeInteractions));
-
+    exit();
     //echo '<pre>';
     //print_r($listeInteractions);
     //echo '</pre>';

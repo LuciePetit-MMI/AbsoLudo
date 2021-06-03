@@ -1,6 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="912d8778-0450-4bb5-aaad-c39d2a4dc525" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/addAvis.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_composants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_composants.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_event.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_event.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/svg/logo_absoludo_grand.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/logo_absoludo_grand.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/logs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/ludo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/games.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/ludoGame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/scripts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/searchBar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index .php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ludotheque.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nogame.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/accueil.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/accueil.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/compte.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/compte.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/evenement.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/evenement.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/forum.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forum.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/logs.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/logs.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ludotheque.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ludotheque.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ludotheque_connait.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ludotheque_connait.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/selection.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/selection.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/topUser.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/topUser.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/topic.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/topic.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tousJeux.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tousJeux.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wishlist.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wishlist.vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/pdo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/process/listeCommentaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/process/listeCommentaires.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/process/listeInteractions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/process/listeInteractions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thanks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topicForum.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qyIEmncMyN68TdBqCiLJ10Ki3p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/lucie/Documents/DUT MMI/S2/Intégration web - JS" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="912d8778-0450-4bb5-aaad-c39d2a4dc525" name="Default Changelist" comment="" />
+      <created>1618045293433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618045293433</updated>
+      <workItem from="1618045294487" duration="262000" />
+      <workItem from="1619427793636" duration="415000" />
+      <workItem from="1620117149570" duration="3850000" />
+      <workItem from="1620196782909" duration="2514000" />
+      <workItem from="1620202150022" duration="20000" />
+      <workItem from="1620300143210" duration="5326000" />
+      <workItem from="1620318810026" duration="1451000" />
+      <workItem from="1620362640133" duration="6482000" />
+      <workItem from="1620387465855" duration="12000" />
+      <workItem from="1620456916527" duration="1125000" />
+      <workItem from="1621058666521" duration="11387000" />
+      <workItem from="1621082042811" duration="10707000" />
+      <workItem from="1621178772413" duration="3997000" />
+      <workItem from="1621251555640" duration="8073000" />
+      <workItem from="1621263182378" duration="1145000" />
+      <workItem from="1621490837461" duration="20000" />
+      <workItem from="1621504089669" duration="3592000" />
+      <workItem from="1621667993369" duration="1159000" />
+      <workItem from="1621672262822" duration="2732000" />
+      <workItem from="1621682210625" duration="10854000" />
+      <workItem from="1621749096543" duration="4002000" />
+      <workItem from="1621856671582" duration="190000" />
+      <workItem from="1622641266022" duration="206000" />
+      <workItem from="1622642045124" duration="468000" />
+      <workItem from="1622704182392" duration="1873000" />
+      <workItem from="1622709260027" duration="447000" />
+      <workItem from="1622722274483" duration="924000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1618045376652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618045376652</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="194" y="254" key="#SQL_Dialects" timestamp="1621088511243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="194" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1621088511243" />
+    <state x="72" y="26" key="#SSH_Configurations" timestamp="1622642289384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="72" y="26" key="#SSH_Configurations/0.0.1536.824@0.0.1536.824" timestamp="1622642289384" />
+    <state x="447" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620198207187">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="447" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620198207187" />
+    <state x="909" y="217" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620364698872">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="909" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1620364698872" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1621257677466">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1621257677466" />
+    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621086320639">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="883" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621086320639" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1622642549664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1622642549664" />
+    <state x="534" y="135" key="NewPhpClassDialog" timestamp="1621088678800">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="534" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1621088678800" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1622705080021">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1622705080021" />
+    <state x="5" y="26" key="SettingsEditor" timestamp="1622642441140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="5" y="26" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622642441140" />
+    <state x="382" y="111" key="ftp.server.browser" timestamp="1622642402755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="382" y="111" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1622642402755" />
+    <state x="611" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1621086182879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="611" y="173" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1621086182879" />
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620119006451">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620119006451" />
   </component>
 </project>

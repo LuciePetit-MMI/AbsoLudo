@@ -54,7 +54,7 @@ var TopUser = Vue.component('TopUser',{
                             </div>
                             <div class="game_interact_notice">
                                 <p class="game_interact_notice_mark">Noter : <i class="icon-de-outline"></i><i class="icon-de-outline"></i><i class="icon-de-outline"></i><i class="icon-de-outline"></i><i class="icon-de-outline"></i></p>
-                                <button class="game_interact_notice_notice secondary_btn"><i class="fas fa-user-edit"></i> Avis</button>
+                                <router-link :to="{name: 'AddAvis', params:{idJeu : jeu.id}}" class="game_interact_notice_notice secondary_btn"><i class="fas fa-user-edit"></i> Avis</router-link>
                             </div>
                             <button class="game_interact_want primary_btn"><i class="far fa-heart fa-2x"></i> Ajouter à ma Wishlist</button>
                         </span>
@@ -96,7 +96,7 @@ var TopUser = Vue.component('TopUser',{
     },
     mounted(){
     //requete Jeux
-        axios.get('http://localhost/AbsoLudo/php/process/listeJeux.php')
+        axios.get(backEnd.jeux)
         .then(response => {
             this.listeJeux = response.data;
             return;
@@ -105,7 +105,7 @@ var TopUser = Vue.component('TopUser',{
             console.log(error);
         });
     //requete Commentaires
-        axios.get('http://localhost/AbsoLudo/php/process/listeCommentaires.php')
+        axios.get(backEnd.commentaires)
         .then(response => {
             this.listeCommentaires = response.data;
             return;

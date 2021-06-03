@@ -13,7 +13,18 @@
 
 #logs {
   background: $dominante;
-  margin-top: 30px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 30px;
+  z-index: 1000;
 
   h1,
   h2,
@@ -48,16 +59,22 @@
 
     .checkbox {
       display: flex;
-      flex-flow: row-reverse wrap;
       justify-content: flex-start;
       align-items: center;
+      position: relative;
+
       label {
         width: 300px;
       }
       input {
         width: 30px;
+        position: absolute;
       }
     }
+  }
+
+  footer {
+    display: none;
   }
 }
 

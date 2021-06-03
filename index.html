@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AbsoLudo</title>
 
-    <!--<link rel="icon" href="favicon.ico"/> -->
+    <link rel="icon" href="./dist/img/svg/de.svg"/>
 
     <!-- Font-awesome -->
     <script src="https://kit.fontawesome.com/7909d40077.js" crossorigin="anonymous"></script>
@@ -14,16 +14,19 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 
     <!-- VueJS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-<!--Dev mode --> <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--Dev mode <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    
     <!-- Vue-router pour injection des composants => routage & navigation -->
     <script src="https://unpkg.com/vue-router"></script>
-
+    
     <!-- Lib Axios pour Ajax -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Librairie momentJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
 </head>
 <body>
@@ -75,13 +78,13 @@
                         <router-link class="link" :to="{name:'Selection'}">Séléction du mois</router-link>
                     </li>
                     <li class="nav_menu_link topj">
-                        <router-link class="link" :to="{name:'Top'}">Tops Jeux</router-link>
+                        <router-link class="link" :to="{name:'TopUser'}">Tops Jeux</router-link>
                     </li>
                     <li class="nav_menu_link wishlist">
                         <router-link class="link" :to="{name:'Wishlist'}">Wishlist</router-link>
                     </li>
                     <li class="nav_menu_link calendar">
-                        <router-link class="link" :to="{name:'Evenement'}">Événements</router-link>
+                        <router-link class="link" :to="{name:'Calendrier'}">Événements</router-link>
                     </li>
                     <li class="nav_menu_link map">
                         <router-link class="link" :to="{name:'Carte'}">Carte</router-link>
@@ -119,13 +122,18 @@
     </footer>
 </div>    
 
+
+<script src="params/params.js"></script>
+
 <!-- les composants utilisés -->
 <script src="pages/accueil.vue.js"></script>
 <script src="pages/ludotheque.vue.js"></script>
 <script src="pages/ludotheque_connait.vue.js"></script>
 <script src="pages/selection.vue.js"></script>
-<script src="pages/top.vue.js"></script>
+<script src="pages/topUser.vue.js"></script>
+<script src="pages/tousJeux.vue.js"></script>
 <script src="pages/wishlist.vue.js"></script>
+<script src="pages/calendrier.vue.js"></script>
 <script src="pages/evenement.vue.js"></script>
 <script src="pages/carte.vue.js"></script>
 <script src="pages/forum.vue.js"></script>
@@ -135,18 +143,21 @@
 <script src="pages/contact.vue.js"></script>
 <script src="pages/thanks.vue.js"></script>
 <script src="pages/logs.vue.js"></script>
+<script src="pages/addAvis.vue.js"></script>
 
 <script>
     // Les routages / navigation de l'application
     var routes = [
         {path: '/',	                    name:"Logs",	            component:Logs},    
-        {path: '/acceuil',		        name:"Accueil",		        component:Accueil},
+        {path: '/accueil',		        name:"Accueil",		        component:Accueil},
         {path: '/ludotheque',	        name:"Ludotheque",	        component:Ludotheque},
         {path: '/ludotheque_connait',	name:"Ludotheque_connait",	component:Ludotheque_connait},
         {path: '/selection',	        name:"Selection",	        component:Selection},
-        {path: '/top',	                name:"Top",	                component:Top},
+        {path: '/topUser',	            name:"TopUser",	            component:TopUser},
+        {path: '/tousjeux',	            name:"TousJeux",	        component:TousJeux},
         {path: '/wishlist',	            name:"Wishlist",	        component:Wishlist},
         {path: '/evenement',	        name:"Evenement",	        component:Evenement},
+        {path: '/calendrier',	        name:"Calendrier",	        component:Calendrier},
         {path: '/carte',	            name:"Carte",	            component:Carte},
         {path: '/forum',	            name:"Forum",	            component:Forum},
         {path: '/topic',	            name:"Topic",	            component:Topic},
@@ -154,12 +165,14 @@
         {path: '/legale_notice',	    name:"Legal_notice",	    component:Legal_notice},
         {path: '/contact',	            name:"Contact",	            component:Contact},
         {path: '/thanks',	            name:"Thanks",	            component:Thanks},
+        {path: '/nouvelAvis',	        name:"AddAvis",	            component:AddAvis},
     ]
 
     // Initialisation du router
     var router = new VueRouter(
         {routes: routes}
     )
+
     // La vue de l'application (id="app")
     var app = new Vue({
         el:"#app",

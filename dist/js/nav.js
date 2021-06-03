@@ -17,17 +17,17 @@
   
   /* Afficher le lien de la page active en .current */
     /*Déclaration des variables*/
-  var id_page = document.querySelector('body').id;
+  /*var id_page = document.querySelector('body').id;
   var li_class = document.querySelectorAll(".nav_menu_link");
   var a = document.querySelectorAll(".link");
   
   for (var i = 0; i < li_class.length; i++) {
     /*Verifie si la page correspond au lien du menu*/
-    if(li_class[i].matches(".nav_menu_link." + id_page)) {
+    /*if(li_class[i].matches(".nav_menu_link." + id_page)) {
       /* Ajoute .current au a correspondant*/
-      a[i].classList.add("current");
+     /* a[i].classList.add("current");
     }
-  }
+  }*/
   
 
   /* Changer de profil */ 

@@ -27,10 +27,9 @@ var Forum = Vue.component('Forum',{
         }
     },
     mounted(){
-        axios.get('http://localhost/AbsoLudo/php/process/listeTopics.php')
+        axios.get(backEnd.topics)
             .then(response => {
                 this.listeTopics = response.data;
-                console.log(this.listeTopics);
             })
             .catch(error => {
                 console.log(error);

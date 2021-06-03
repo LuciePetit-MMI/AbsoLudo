@@ -43,7 +43,7 @@ var Topic = Vue.component('Topic',{
     },
     mounted(){
         //recuperation des données du topic
-        axios.get('http://localhost/AbsoLudo/php/process/listeTopics.php')
+        axios.get(backEnd.topics)
             .then(response => {
                 this.listeTopics = response.data;
                 console.log(this.listeTopics);
@@ -53,7 +53,7 @@ var Topic = Vue.component('Topic',{
             }),
 
             //recupération des données des reponses
-            axios.get('http://localhost/AbsoLudo/php/process/listeReponses.php')
+            axios.get(backEnd.reponses)
             .then(response => {
                 this.listeReponses = response.data;
                 console.log(this.listeReponses);

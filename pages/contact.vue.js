@@ -8,7 +8,6 @@ var Contact = Vue.component('Contact',{
             <input type="text" placeholder="Prénom (obligatoire)">
             <input type="text" placeholder="Mail (obligatoire)">
             <input type="message" placeholder="Message (obligatoire)">
-            <p>Mettre un captcha</p>
             <input type="submit" class="form-btn secondary_btn" value="Envoyer">
         </form>
     </div>

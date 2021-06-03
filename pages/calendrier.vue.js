@@ -1,12 +1,12 @@
-var Evenement = Vue.component('Evenement',{
+var Calendrier = Vue.component('Calendrier',{
     template:`
        <div id="calendar">
             <h1>
-                <router-link :to="{name: 'Calendrier'}" id="agenda_title">Agenda</router-link>
-                <router-link :to="{name: 'Evenement'}" id="participated_title" class="active">Je Participe</router-link>
-            </h1>
+                <router-link :to="{name: 'Calendrier'}" id="agenda_title" class="active">Agenda</router-link>
+                <router-link :to="{name: 'Evenement'}" id="participated_title">Je Participe</router-link>
+        </h1>
             
-            <section id="participated">
+            <section id="agenda">
                 <button id="prev" class="slider_btn"><i class="fas fa-chevron-left"></i></button>
                 <button id="next" class="slider_btn"><i class="fas fa-chevron-right"></i></button>
                     <ul class="slider">

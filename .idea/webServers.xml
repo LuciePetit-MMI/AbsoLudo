@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a48de183-ef93-4ccd-a1f2-79c568624cf8" name="absoludo_final">
+        <fileTransfer rootFolder="/home/clients/4a1590fc311a21261eccbf48491a68b5" accessType="SFTP" host="q19cd.ftp.infomaniak.com" port="22" sshConfigId="22c13c8f-3488-4c65-a3c3-50e1cae1e437" sshConfig="q19cd_luciepetit@q19cd.ftp.infomaniak.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

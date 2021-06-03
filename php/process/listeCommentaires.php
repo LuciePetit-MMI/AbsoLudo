@@ -13,7 +13,7 @@
     //Preparation de la requete
     $requete = $pdo->prepare($sql);
 
-    //Tableau des reponses
+    //Tableau des reponses 
     //$Commentaires = array();
     $listeCommentaires = array();
 

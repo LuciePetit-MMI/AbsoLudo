@@ -2,8 +2,8 @@
     
     // Création objet PDO
     $pdo = new PDO(
-        'mysql:host=localhost;dbname=absoludo_data_base',
-        'root',
-        'root'
+        'mysql:host=q19cd.myd.infomaniak.com;dbname=q19cd_absoludo',
+        'q19cd_absoludo',
+        'aBsoluDo25'
     );
 ?>

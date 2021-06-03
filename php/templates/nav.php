@@ -1,3 +1,5 @@
+<?php include("./php/process/listeUtilisateurs.php");?>
+
 <nav class="nav">
 
     <a href="index%20.php"><img src="./dist/img/svg/logo_absoludo.svg" alt="Logo Absoludo" class="nav_logo"></a>
@@ -6,7 +8,7 @@
     </div>
     <div class="nav_profil_change_items">
         <p class="triangle">Changer de profil ? </p>
-        <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 1" class="nav_profil_change_item"><p>Nom Prénom</p></div>
+        <div class="nav_profil_change_item"><img src="./dist/img/<?= $profil->avatar;?>" alt="Photo Profil 1" class="nav_profil_change_item"><p><?php echo $profil->pseudo;?></p></div>
         <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 2" class="nav_profil_change_item"><p>Nom Prénom 2</p></div>
         <div class="nav_profil_change_item"><img src="./dist/img/profil.jpg" alt="Photo Profil 3" class="nav_profil_change_item"><p>Nom Prénom 3</p></div>
         <a href="">Déconnexion</a>

@@ -17,8 +17,8 @@ var Ludotheque_connait = Vue.component('Ludotheque_connait',{
                             <div class="ludo_game_text">
                                 <h3 class="ludo_game_title" v-if="jeu.name">{{jeu.name}}</h3>
                                 <div class="ludo_game_btns">
-                                    <button class="ludo_game_have secondary_btn have_section"><i class="fas fa-chess-king"></i> Je l'ai</button>
-                                    <button class="ludo_game_want secondary_btn want_section"><i class="far fa-heart"></i> Je le veux</button>
+                                    <button class="ludo_game_have secondary_btn have_section" :class="{active:isActiveHave}" @click="isActiveHave = !isActiveHave"><i class="fas fa-chess-king"></i> Je l'ai</button>
+                                    <button class="ludo_game_want secondary_btn want_section" :class="{active:isActiveWant}" @click="isActiveWant = !isActiveWant"><i class="far fa-heart"></i> Je le veux</button>
                                 </div>
                             </div>
                         </div>
@@ -32,10 +32,12 @@ var Ludotheque_connait = Vue.component('Ludotheque_connait',{
     data(){
         return{
             listeJeux:[],
+            isActiveHave: false,
+            isActiveWant: false,
         }
     },
     mounted(){
-        axios.get('http://localhost/AbsoLudo/php/process/listeJeux.php')
+        axios.get(backEnd.jeux)
         .then(response => {
             this.listeJeux = response.data;
            //console.log(this.listeJeux);
@@ -44,8 +46,17 @@ var Ludotheque_connait = Vue.component('Ludotheque_connait',{
         .catch(error => {
             console.log(error);
         });
+        axios.get(backEnd.interactions)
+        .then(response => {
+            this.isActive = response.data;
+           //console.log(this.listeJeux);
+            return;
+        })
+        .catch(error => {
+            console.log(error);
+        });
     },
     methods:{
-       
+        
     }
 })

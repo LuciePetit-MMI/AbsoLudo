@@ -5,9 +5,11 @@ var events = document.querySelectorAll('.event_list_item');
 function showDetails (){
     // Show details
     this.classList.toggle('event_list_item_open');
+    console.log('open');
 }
 
 for (let i=0; i<events.length; i++){
+    console.log('boucle for');
     const event = events[i];
     event.addEventListener('click', showDetails);
 }
